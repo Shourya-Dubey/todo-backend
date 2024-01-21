@@ -3,10 +3,11 @@ const router = express.Router();
 
 //import controller
 const{createTodo} = require("../controllers/createTodo");
-const { getAllTodo } = require("../controllers/getAllTodo");
+const { getAllTodo, getTodoById } = require("../controllers/getAllTodo");
 
 //define API routes
 router.post("/createTodo", createTodo);
 router.get("/getalltodo", getAllTodo);
+router.get("/gettodo/:id", getTodoById);
 
 module.exports = router;
